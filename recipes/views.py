@@ -8,7 +8,7 @@ from django.http import HttpResponse
 # RETURN HTTP RESPONSE
     
 def home(request):
-    return render(request, "home.html",context={
+    return render(request, "pages/home.html",context={
         'name':'Django'
     })
 
