@@ -12,3 +12,7 @@ def home(request):
         'name':'Django'
     })
 
+def recipe(request,id):
+    return render(request, "pages/recipe-view.html",context={
+        'name':'Django'
+    })
