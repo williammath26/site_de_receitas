@@ -1,15 +1,10 @@
+from faker import Faker
 from random import randint
 
-from faker import Faker
-
+fake = Faker('pt_BR')  # Declara aqui, antes da função
 
 def rand_ratio():
     return randint(840, 900), randint(473, 573)
-
-
-faker = Faker('pt_BR')
-# print(signature(fake.random_number))
-
 
 def make_recipe():
     return {
@@ -32,7 +27,6 @@ def make_recipe():
             'url': 'https://loremflickr.com/%s/%s/food,cook' % rand_ratio(),
         }
     }
-
 
 if __name__ == '__main__':
     from pprint import pprint
