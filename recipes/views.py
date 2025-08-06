@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from utils.recipes.factory import make_recipe
 
 # HTTP REQUESTS
 # HTTP RESPONSE
@@ -9,10 +9,10 @@ from django.http import HttpResponse
     
 def home(request):
     return render(request, "pages/home.html",context={
-        'name':'Django'
+        'recipes':[make_recipe() for _ in range(10)]
     })
 
 def recipe(request,id):
     return render(request, "pages/recipe-view.html",context={
-        'name':'Django'
+        recipe:make_recipe(),
     })
