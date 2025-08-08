@@ -12,7 +12,7 @@ def home(request):
         'recipes':[make_recipe() for _ in range(10)]
     })
 
-def recipe(request,id):
-    return render(request, "pages/recipe-view.html",context={
-        recipe:make_recipe(),
+def recipe(request, id):
+    return render(request, "pages/recipe-view.html", context={
+        'recipe': make_recipe(),
     })
